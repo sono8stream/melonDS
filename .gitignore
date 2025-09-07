@@ -18,6 +18,5 @@ compile_commands.json
 .DS_Store
 
 .vs
-.vscode
 CMakeFiles
 CMakeCache.txt

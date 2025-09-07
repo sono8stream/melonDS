@@ -1,0 +1,48 @@
+{
+	"version": "2.0.0",
+	"tasks": [
+		{
+			"label": "CMake pre-build",
+			"type": "shell",
+			"command": "C:/msys64/ucrt64/bin/cmake.exe",
+			"args": [
+				"-B", "${workspaceFolder}/build",
+			],
+			"options": {
+				"env": {
+				"PATH": "C:/msys64/ucrt64/bin;${env:PATH}"
+				}
+			},
+			"problemMatcher": []
+		},
+		{
+			"label": "CMake build",
+			"type": "shell",
+			"command": "C:/msys64/ucrt64/bin/cmake.exe",
+			"args": [
+				"--build", "${workspaceFolder}/build",
+			],
+			"options": {
+				"env": {
+				"PATH": "C:/msys64/ucrt64/bin;${env:PATH}"
+				}
+			},
+			"problemMatcher": []
+		},
+		{
+            "label": "Run melonDS.exe (ucrt64)",
+            "type": "shell",
+            "command": "cmd.exe",
+            "args": [
+                "/c",
+				"build\\melonDS.exe"
+            ],
+            "options": {
+                "env": {
+                    "PATH": "C:/msys64/ucrt64/bin;${env:PATH}"
+                }
+            },
+            "problemMatcher": []
+        }
+	]
+}
